@@ -13,7 +13,6 @@ MongoClient.connect(db.url, (err, database) => {
 
   // Add this line below to make it work with the new version of mongodb
   // (make sure you add the database name and not the collection name)
-
   database = database.db("canada-weather-api")
 
   require("./app/routes")(app, database)
